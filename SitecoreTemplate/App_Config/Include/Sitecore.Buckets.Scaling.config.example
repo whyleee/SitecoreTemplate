@@ -1,0 +1,59 @@
+﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <!-- SITECORE BUCKETS SCALING
+           Enable this if you need to be able to shard your indexes across servers with the default 
+           Search Providers. This allows you to designate a remote index building machine as well
+           as a dedicated Search Query Server.
+           
+           USE: This can either be used for an authoring server to rebuild its indexes on a remote machine
+           or for an authoring machine to send its search queries to a dedicated query server.
+      -->
+    <events>
+      <!-- REMOTE INDEXING EVENTS
+           This allows a user to hook into when the indexing has finished on remote servers.
+      -->
+      <event name="item:indexing:remotestarting"/>
+      <event name="item:indexing:remotefinished"/>
+    </events>
+    <settings>
+      
+      <!-- QUERY SERVER ADDRESS
+           This allows the CM Server to have a dedicated Query Server
+           Use: value="http://queryserver
+      -->
+      <setting name="Scaling.QueryServer" value=""/>
+
+      <!-- REMOTE INDEX REBUILD LOCATION
+           The location where the indexes are built on the indexing server.
+           Use: value="c:\remote"
+      -->
+      <setting name="Scaling.RemoteIndexLocation" value="c:\remote"/>
+
+      <!-- REMOTE INDEX DROP LOCATION
+           The read only drop location that the built indexes are moved to. 
+		   Other servers can then copy them to their local index directory.
+           Use: value="\\NetworkServerName\Directory\SubDirectory"
+      -->
+      <setting name="Scaling.NetworkDropPoint" value="\\SERVERNAME\c$\inetpub\wwwroot\sitename\Website\Data\indexes"/>
+
+      <!-- INDEXING SERVER SERVICE LOCATION
+           The method that is called from the Initiator to the dedicated indexing server telling it to start rebuilding the index remotely.     
+      -->
+      <setting name="Scaling.RemoteIndexingServer" value="http://localhost/sitecore/shell/Applications/Buckets/Rebuild.asmx/Build"/>
+
+      <!-- SEARCH SERVER COPY SERVICE
+           When the indexes are finished being rebuilt remotely, before indexing server copies the index back to the Initiator, it tells 
+		   the Initiator to disable the History Engine.      
+      -->
+      <setting name="Scaling.RemoteIndexingReceipt" value="http://localhost/sitecore/shell/Applications/Buckets/Rebuild.asmx/Reciept"/>
+
+      <!-- SERVICE TO RE-ENABLE INDEXING ENGINE
+           This allows the CM server to run index rebuilds on a remote computer and copy the indexes back
+           to the default index directory when they are finished.
+      -->
+      <setting name="Scaling.RemoteIndexingReceiptEnable" value="http://localhost/sitecore/shell/Applications/Buckets/Rebuild.asmx/EnableIndexing"/>
+    </settings>
+  </sitecore>
+</configuration>
+
+
