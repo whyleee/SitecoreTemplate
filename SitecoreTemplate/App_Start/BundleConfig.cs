@@ -23,7 +23,6 @@ namespace SitecoreTemplate.App_Start
 
             // css
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                "~/css/base.css"
                 // Your css here...
             ));
         }

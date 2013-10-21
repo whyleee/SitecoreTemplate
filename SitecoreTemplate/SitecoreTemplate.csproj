@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,16 +13,17 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SitecoreTemplate</RootNamespace>
     <AssemblyName>SitecoreTemplate</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,218 +43,270 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentArt.Web.UI">
+    <Reference Include="ComponentArt.Web.UI, Version=2010.1.2637.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ComponentArt.Web.UI.2010.1.2637.35\lib\ComponentArt.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="ITHit.WebDAV.Server">
+    <Reference Include="ITHit.WebDAV.Server, Version=2.1.1.108, Culture=neutral, PublicKeyToken=d057f7b1134051b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ITHit.WebDAV.Server.2.1.1.108\lib\ITHit.WebDAV.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net">
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Analyzers">
+    <Reference Include="Lucene.Net.Contrib.Analyzers, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Analyzers.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Core">
+    <Reference Include="Lucene.Net.Contrib.Core, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.FastVectorHighlighter">
+    <Reference Include="Lucene.Net.Contrib.FastVectorHighlighter, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.FastVectorHighlighter.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Highlighter">
+    <Reference Include="Lucene.Net.Contrib.Highlighter, Version=2.3.2.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Highlighter.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Memory">
+    <Reference Include="Lucene.Net.Contrib.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Queries">
+    <Reference Include="Lucene.Net.Contrib.Queries, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Queries.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Regex">
+    <Reference Include="Lucene.Net.Contrib.Regex, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Regex.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.SimpleFacetedSearch">
+    <Reference Include="Lucene.Net.Contrib.SimpleFacetedSearch, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.SimpleFacetedSearch.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.Snowball">
+    <Reference Include="Lucene.Net.Contrib.Snowball, Version=2.0.0.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.Snowball.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net.Contrib.SpellChecker">
+    <Reference Include="Lucene.Net.Contrib.SpellChecker, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Lucene.Net.Contrib.3.0.3\lib\net40\Lucene.Net.Contrib.SpellChecker.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Mvp.Xml">
-      <HintPath>..\packages\Mvp.Xml.2.0.2158.1055\lib\Mvp.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RadEditor.Net2">
-      <HintPath>..\packages\Telerik.Web.RadEditor.7.2.0\lib\RadEditor.Net2.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Analytics">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Apps.Loader">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Apps.Loader.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Automation.MarketingAutomation">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Automation.MarketingAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Buckets">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Buckets.Client">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Client">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.ContentSearch">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.ContentSearch.Client">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq.Lucene">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.ContentSearch.LuceneProvider">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Igloo.Shared">
-      <HintPath>..\packages\Sitecore.ImageCropper.1.0.0\lib\Sitecore.Igloo.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Kernel.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Logging">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc.Analytics">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc.DeviceSimulator">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc.ExperienceEditor">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="sitecore.nexus">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\sitecore.nexus.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.NVelocity">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.NVelocity.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Oracle">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Publishing.WebDeploy">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Publishing.WebDeploy.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Security.AntiCsrf">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Security.AntiCsrf.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.SegmentBuilder">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.SegmentBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.SharedSource.Localization">
-      <HintPath>..\packages\Sitecore.SharedSource.Localization.Core.1.0.1\lib\Sitecore.SharedSource.Localization.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Shell.MarketingAutomation">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Shell.MarketingAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Update">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Update.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Zip">
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Base">
-      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Database">
-      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Report">
-      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Report.Web">
-      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Report.WebDesign">
-      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI">
+    <Reference Include="Mvp.Xml, Version=2.0.2158.1055, Culture=neutral, PublicKeyToken=dd92544dc05f5671, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Mvp.Xml.2.0.2158.1055\lib\Mvp.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RadEditor.Net2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=852c9eb6525c1b53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik.Web.RadEditor.7.2.0\lib\RadEditor.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Apps.Loader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Apps.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Automation.MarketingAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Automation.MarketingAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq.Lucene, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.LuceneProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Igloo.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.ImageCropper.1.0.0\lib\Sitecore.Igloo.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.DeviceSimulator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.ExperienceEditor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\sitecore.nexus.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.NVelocity, Version=0.4.2.8580, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Oracle, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Publishing.WebDeploy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Publishing.WebDeploy.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Security.AntiCsrf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Security.AntiCsrf.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.SegmentBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.SegmentBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.SharedSource.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.SharedSource.Localization.Core.1.0.1\lib\Sitecore.SharedSource.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Shell.MarketingAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Shell.MarketingAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Update, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Update.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Zip, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stimulsoft.Reports.2009.3.600\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Telerik.Web.UI.2012.2.607.35\lib\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Telerik.Web.UI.2012.2.607.35\lib\Telerik.Web.UI.Skins.dll</HintPath>
     </Reference>
-    <Reference Include="WebGrease">
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -271,6 +324,19 @@
     <Content Include="css\sitecore\rte.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="App_Config\Include\Sitecore.SharedSource.Localization.config" />
+    <Content Include="App_Config\Include\ImageProcessor.config" />
+    <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
+    <Content Include="js\jquery\jquery-2.0.3.js" />
+    <Content Include="js\jquery\jquery-2.0.3.min.js" />
+    <Content Include="js\jquery\jquery-2.0.3.min.map" />
+    <None Include="js\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="js\jquery\jquery.unobtrusive-ajax.js" />
+    <Content Include="js\jquery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="js\jquery\jquery.validate.js" />
+    <Content Include="js\jquery\jquery.validate.min.js" />
+    <Content Include="js\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="js\jquery\jquery.validate.unobtrusive.min.js" />
     <Content Include="Sitecore.config" />
     <Content Include="App_Browsers\Form.browser" />
     <Content Include="App_Browsers\XamlPage.browser" />
@@ -322,19 +388,6 @@
     <Content Include="default.htm.sitedown" />
     <Content Include="css\sitecore\webedit.css" />
     <Content Include="App_Config\log4net.config" />
-    <Content Include="App_Config\Include\ImageProcessor.config" />
-    <Content Include="App_Config\Include\Sitecore.SharedSource.Localization.config" />
-    <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
-    <Content Include="js\jquery\jquery-2.0.3.js" />
-    <Content Include="js\jquery\jquery-2.0.3.min.js" />
-    <Content Include="js\jquery\jquery-2.0.3.min.map" />
-    <Content Include="js\jquery\jquery.unobtrusive-ajax.js" />
-    <Content Include="js\jquery\jquery.unobtrusive-ajax.min.js" />
-    <None Include="js\jquery\jquery.validate-vsdoc.js" />
-    <Content Include="js\jquery\jquery.validate.js" />
-    <Content Include="js\jquery\jquery.validate.min.js" />
-    <Content Include="js\jquery\jquery.validate.unobtrusive.js" />
-    <Content Include="js\jquery\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="js\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />

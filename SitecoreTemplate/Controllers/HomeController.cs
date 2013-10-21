@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace SitecoreTemplate.Controllers
@@ -9,7 +10,8 @@ namespace SitecoreTemplate.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Hello, Sitecore!";
+            ViewBag.Title = Sitecore.Context.Item["Title"];
+            ViewBag.Message = new HtmlString(Sitecore.Context.Item["Text"]);
 
             return PartialView();
         }

@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Sitecore Template</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Clean Sitecore 7 template, with MVC 5 and NuGet">
+    <meta name="keywords" content="Sitecore, ASP.NET, MVC, NuGet, template">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="shortcut icon" href="~/favicon.ico">
     @Styles.Render("~/bundles/css")
 </head>
 <body>
     <header>
         <h1>Sitecore Template</h1>
     </header>
-    <section role="main">
-        @Html.Sitecore().Placeholder("main")
-    </section>
-    <footer>© 2013 Creuna</footer>
+    <main>
+        @Html.Sitecore().Placeholder("content")
+    </main>
+    <footer>© @DateTime.Now.Year Company</footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/js")
 </body>
