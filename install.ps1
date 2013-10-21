@@ -25,6 +25,7 @@ $destination.Copyhere($zip_file.items())
 
 # iis
 echo "Installing website..."
+Import-Module WebAdministration
 New-WebAppPool $proj_name
 Set-ItemProperty "IIS:\AppPools\$proj_name" managedRuntimeVersion v4.0
 New-WebSite -Name $proj_name -Port 80 -HostHeader "my.$hostname" -ApplicationPool $proj_name -PhysicalPath "$web_path"
