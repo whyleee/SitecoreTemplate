@@ -1,1 +1,1 @@
-.tools\vspte.exe -s SitecoreTemplate.sln -p SitecoreTemplate -x
+packages\vspte.0.4\vspte.exe -s SitecoreTemplate.sln -p SitecoreTemplate --vsix Package --nuget

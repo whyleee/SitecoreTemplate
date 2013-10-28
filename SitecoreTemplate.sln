@@ -10,21 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5BE121
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package", "Package\Package.csproj", "{3F31E9B4-8CDD-4667-80C6-8BA949EFFFDA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{1AE6C60B-E8E1-4EE7-A82F-1E2495402CF5}"
-	ProjectSection(SolutionItems) = preProject
-		.tools\vspte.exe = .tools\vspte.exe
-		.tools\vspte.exe.config = .tools\vspte.exe.config
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C57C4C9-5A93-47FE-B792-DDE97F4A7E25}"
 	ProjectSection(SolutionItems) = preProject
 		build-vsix.cmd = build-vsix.cmd
 		install.cmd = install.cmd
-		install.ps1 = install.ps1
 	EndProjectSection
 EndProject
 Global

@@ -1,1 +1,1 @@
-powershell -File install.ps1
+powershell -NoProfile -NoExit -ExecutionPolicy Unrestricted -Command "cd 'SitecoreTemplate'; .\install.ps1"

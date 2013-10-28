@@ -326,6 +326,7 @@
     <Content Include="Global.asax" />
     <Content Include="App_Config\Include\Sitecore.SharedSource.Localization.config" />
     <Content Include="App_Config\Include\ImageProcessor.config" />
+    <None Include="install.ps1" />
     <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="js\jquery\jquery-2.0.3.js" />
     <Content Include="js\jquery\jquery-2.0.3.min.js" />
@@ -396,6 +397,7 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="install_utils.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

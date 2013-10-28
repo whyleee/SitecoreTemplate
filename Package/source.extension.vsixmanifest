@@ -16,13 +16,6 @@
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5.1,)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:VsixSubPath="SitecoreTemplate" d:Source="File" Path="SitecoreTemplate\MyTemplate.vstemplate"
-           ProjectType="MVC"
-           Language="C#"
-           ViewEngine="Razor"
-           TemplateId="Sitecore7MVCTemplate.v0.1"
-           Title="Sitecore 7"
-           Description="A project template for creating Sitecore 7 CMS websites, based on MVC framework and NuGet"
-           Version="4.0"/>
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:VsixSubPath="SitecoreTemplate" d:Source="File" Path="SitecoreTemplate\MyTemplate.vstemplate" ProjectType="MVC" Language="C#" ViewEngine="Razor" TemplateId="Sitecore7MVCTemplate.v0.1" Title="Sitecore 7" Description="A project template for creating Sitecore 7 CMS websites, based on MVC framework and NuGet" Version="4.0" />
   </Assets>
 </PackageManifest>
