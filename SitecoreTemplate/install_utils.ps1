@@ -10,8 +10,8 @@ $progress = 0
 
 Function Write-InstallProgress($done, $op)
 {
-    $status = "$([math]::round($done))% complete"
-    Write-Progress -Activity "Installing $sitename..." -Status $status -PercentComplete $done -CurrentOperation $op
+    # $status = "$([math]::round($done))% complete"
+    # Write-Progress -Activity "Installing $sitename..." -Status $status -PercentComplete $done -CurrentOperation $op
     $progressMsg = "[{0,-4}] $op" -f "$done%"
     echo $progressMsg
 }
@@ -19,7 +19,7 @@ Function Write-InstallProgress($done, $op)
 Function Write-InstallCompleted()
 {
     $completeMsg = "Installation finished."
-    Write-Progress -Activity "Installing $sitename..." -Completed -Status "100% complete" -CurrentOperation $completeMsg
+    # Write-Progress -Activity "Installing $sitename..." -Completed -Status "100% complete" -CurrentOperation $completeMsg
     echo "[100%] $completeMsg"
 }
 
@@ -28,7 +28,7 @@ Function Build-Solution()
     Write-InstallProgress $progress "Building solution..."
 
     $msbuild = "$env:windir\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
-    $msbuild_args = "/m"
+    $msbuild_args = "/m", "/p:VisualStudioVersion=12.0"
     & $msbuild $msbuild_args
 
     $script:progress += 30
@@ -37,19 +37,18 @@ Function Build-Solution()
 Function Install-Package($package, $to)
 {
     $packageZip = "$package.zip"
-    New-Item -ItemType Directory -Force -Path $to
+    New-Item -ItemType Directory -Force -Path $to > $null
 
     # download
     $url = $nuget_server + "/content/" + $packageZip
     $zip_path = Join-Path (Get-Location).Path $packageZip
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($url, $zip_path)
+    iwr $url -OutFile $zip_path
 
     # unzip
     $shell_app = new-object -com shell.application
     $zip_file = $shell_app.namespace($zip_path)
     $destination = $shell_app.namespace($to)
-    $destination.Copyhere($zip_file.items(), 0x14)
+    $destination.Copyhere($zip_file.items(), 0x10)
 
     # cleanup
     Remove-Item $zip_path
