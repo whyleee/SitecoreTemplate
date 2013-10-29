@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		install.cmd = install.cmd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.Wizards", "Package.Wizards\Package.Wizards.csproj", "{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{3F31E9B4-8CDD-4667-80C6-8BA949EFFFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F31E9B4-8CDD-4667-80C6-8BA949EFFFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F31E9B4-8CDD-4667-80C6-8BA949EFFFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

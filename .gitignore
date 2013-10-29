@@ -92,3 +92,5 @@ App_Data
 
 #SitecoreTemplate
 /*/css/*.css
+Package/*.dll
+Package/*.pdb

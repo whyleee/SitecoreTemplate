@@ -17,5 +17,6 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:VsixSubPath="SitecoreTemplate" d:Source="File" Path="SitecoreTemplate\MyTemplate.vstemplate" ProjectType="MVC" Language="C#" ViewEngine="Razor" TemplateId="Sitecore7MVCTemplate.v0.1" Title="Sitecore 7" Description="A project template for creating Sitecore 7 CMS websites, based on MVC framework and NuGet" Version="4.0" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="Package.Wizards.dll" AssemblyName="Package.Wizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" WizardClass="Package.Wizards.SitecoreProjectSettingsWizard" />
   </Assets>
 </PackageManifest>
