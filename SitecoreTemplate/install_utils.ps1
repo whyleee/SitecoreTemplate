@@ -2,11 +2,11 @@
 # PowerShell Functions for website install scripts
 ################################################################
 
-# modules
-Import-Module WebAdministration
+# requires: WebAdministration
 
 # env
 $progress = 0
+$log_path = $null
 
 Function Write-InstallProgress($done, $op)
 {
@@ -23,13 +23,95 @@ Function Write-InstallCompleted()
     echo "[100%] $completeMsg"
 }
 
+Function Start-Logging
+{
+    if ($VSVersion -eq '12.0') {
+        $vs_dir_name = 'Visual Studio 2013\'
+    } elseif ($VSVersion -eq '11.0') {
+        $vs_dir_name = 'Visual Studio 2012\'
+    } else {
+        return
+    }
+
+    $timestamp = Get-Date -Format 'yyyy-MM-dd.HH-mm-ss'
+    $log_dir_path = "$Home\Documents\$vs_dir_name\Logs"
+    mkdir -f $log_dir_path > $null
+    $script:log_path = Join-Path $log_dir_path ("VisualStudio_SitecoreInstall." + $timestamp + ".txt")
+    Continue-Logging
+}
+
+Function Continue-Logging
+{
+    Param([Switch]$Append=$false)
+    if ($script:log_path) {
+        Start-Transcript -Path $script:log_path -Append:$Append
+    }
+}
+
+Function Stop-Logging
+{
+    if ($script:log_path) {
+        Stop-Transcript
+    }
+}
+
+Function Log-Buffer($startText, $endText)
+{
+    if (!$script:log_path) {
+        return
+    }
+
+    Stop-Logging
+    $ui = $host.ui.rawui
+    $height = $ui.CursorPosition.Y
+    $width = $ui.BufferSize.Width
+    $dims = 0,0,($width-1),$height
+    $rect = new-object Management.Automation.Host.Rectangle -argumentList $dims
+    $cells = $ui.GetBufferContents($rect)
+    $writeLog = $false;
+
+    $startTextList = $startText.Split('|')
+    $endTextList = $endText.Split('|')
+
+    for ([int]$row=0; $row -lt $height; $row++ ) {
+        $rowText = '';
+        for ([int]$col=0; $col -lt $width; $col++ ) {
+            $cell = $cells[$row,$col]
+            $rowText += $cell.Character
+        }
+        foreach ($text in $startTextList) {
+            if ($rowText.StartsWith($text)) {
+                $writeLog = $true
+                break
+            }
+        }
+        if ($writeLog){
+            Add-Content $script:log_path "$rowText"
+        }
+        $breakOuter = $false
+        foreach ($text in $endTextList) {
+            if ($rowText.StartsWith($text)) {
+                $breakOuter = $true
+                break
+            }
+        }
+        if ($breakOuter) {
+            break
+        }
+    }
+    Continue-Logging -Append:$true
+}
+
 Function Build-Solution()
 {
     Write-InstallProgress $progress "Building solution..."
 
     $msbuild = "$env:windir\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
     $msbuild_args = "/m", "/p:VisualStudioVersion=12.0"
+    
+    #& $msbuild $msbuild_args | Out-Host # no color
     & $msbuild $msbuild_args
+    Log-Buffer "Build succeeded|Build FAILED" "Time Elapsed"
 
     $script:progress += 30
 }

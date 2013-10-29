@@ -21,12 +21,15 @@ $script = {
     Launch-Website $sitename $hostname
 }
 
-# invoke script
 try {
     . .\install_utils.ps1
+    Start-Logging
+    Import-Module WebAdministration
     & $script
     Write-InstallCompleted
 } catch {
-    Write-Error $_
+    Write-Host ($_ | Format-List | Out-String) -Foreground 'Red'
     echo "Installation failed."
+} finally {
+    Stop-Logging
 }
