@@ -14,6 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5BE121
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package", "Package\Package.csproj", "{3F31E9B4-8CDD-4667-80C6-8BA949EFFFDA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E} = {F74E9EC2-0CAB-4C87-AC89-59D606AF3F1E}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C57C4C9-5A93-47FE-B792-DDE97F4A7E25}"
 	ProjectSection(SolutionItems) = preProject

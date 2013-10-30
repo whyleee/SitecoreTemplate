@@ -16,6 +16,7 @@ $packages = @{
 # install
 $script = {
     Build-Solution
+    Set-IisSqlAcessRights $root_path
     Install-Packages $packages
     Create-Website $sitename $hostname $web_path
     Launch-Website $sitename $hostname

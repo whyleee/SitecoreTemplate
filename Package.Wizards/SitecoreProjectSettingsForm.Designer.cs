@@ -46,6 +46,10 @@
             this.uiLblLicenseFile.TabIndex = 0;
             this.uiLblLicenseFile.Text = "Select Sitecore 7 CMS license file to use with the website:";
             // 
+            // uiOfdLicenseFile
+            // 
+            this.uiOfdLicenseFile.Filter = "License files|*.xml|All files|*.*";
+            // 
             // uiTxtLicenseFile
             // 
             this.uiTxtLicenseFile.Location = new System.Drawing.Point(16, 40);

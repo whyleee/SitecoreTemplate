@@ -11,6 +11,7 @@ namespace Package.Wizards
     public partial class SitecoreProjectSettingsForm : Form
     {
         private readonly SitecoreProjectSettings _settings;
+        private bool txtLicenseFileTouched = false;
 
         public SitecoreProjectSettingsForm(SitecoreProjectSettings settings)
         {
@@ -29,12 +30,17 @@ namespace Package.Wizards
 
         private void uiTxtLicenseFile_TextChanged(object sender, EventArgs e)
         {
+            txtLicenseFileTouched = true;
             _settings.LicenseFile = uiTxtLicenseFile.Text;
             ValidateChildren();
         }
 
         private void uiTxtLicenseFile_Validating(object sender, CancelEventArgs e)
         {
+            if (!txtLicenseFileTouched)
+            {
+                return;
+            }
             if (uiTxtLicenseFile.Text.Length == 0)
             {
                 uiErrLicenseFile.Text = "Sitecore license file is required to create a project";

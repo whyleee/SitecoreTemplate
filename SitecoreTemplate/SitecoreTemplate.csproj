@@ -326,6 +326,10 @@
     <Content Include="Global.asax" />
     <Content Include="App_Config\Include\Sitecore.SharedSource.Localization.config" />
     <Content Include="App_Config\Include\ImageProcessor.config" />
+    <Content Include="..\packages\ComponentArt.Web.UI.2010.1.2637.35\lib\ComponentArt.UIFramework.lic">
+      <Link>ComponentArt.UIFramework.lic</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="install.ps1" />
     <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="js\jquery\jquery-2.0.3.js" />

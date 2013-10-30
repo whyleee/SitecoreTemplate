@@ -141,10 +141,35 @@ Function Install-Package($package, $to)
     }
 }
 
-Function Install-DbPackage($db_dir) {
-    # Add SQL Server 2008 snapins
+Function Set-AccessRights($dir, $who, $rights)
+{
+    $acl = Get-Acl $dir
+    $rights = [System.Security.AccessControl.FileSystemRights] $rights
+    $inheritance = [System.Security.AccessControl.InheritanceFlags] 'ContainerInherit, ObjectInherit'
+    $acl_rule = New-Object System.Security.AccessControl.FileSystemAccessRule($who, $rights, $inheritance, 'None', 'Allow')
+    $acl.AddAccessRule($acl_rule)
+    Set-Acl $dir $acl
+}
+
+Function Set-IisSqlAcessRights($root_path)
+{
+    Set-AccessRights $root_path 'BUILTIN\Users' 'ReadAndExecute, Synchronize'
+    Set-AccessRights $root_path 'Authenticated Users' 'Modify, Synchronize'
+}
+
+Function Install-DbPackage($db_dir)
+{
+    # add SQL Server 2008 snapins
     Add-PSSnapin SqlServerCmdletSnapin100
     Add-PSSnapin SqlServerProviderSnapin100
+
+    # create db user
+    $db_user_name = $sitename + '.Admin'
+    $db_user_password = '!QA2ws3ed'
+    $create_db_user_sql = @"
+CREATE LOGIN [$db_user_name] WITH PASSWORD=N'$db_user_password', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+"@
+    Invoke-Sqlcmd -Query $create_db_user_sql -ServerInstance $db_server -Verbose
 
     # attach all dbs in dir to $db_server
     $db_files = ls $db_dir
@@ -171,6 +196,18 @@ Function Install-DbPackage($db_dir) {
 CREATE DATABASE [$target_db_name] ON (FILENAME = N'$targetMdf'), (FILENAME = N'$targetLdf') FOR ATTACH
 "@
         Invoke-Sqlcmd -Query $attach_db_sql -ServerInstance $db_server -Verbose
+
+        # map user to db
+        $map_user_to_db_sql = @"
+USE [$target_db_name]
+GO
+CREATE USER [$db_user_name] FOR LOGIN [$db_user_name]
+GO
+EXEC sp_addrolemember N'db_datareader', N'$db_user_name'
+EXEC sp_addrolemember N'db_datawriter', N'$db_user_name'
+EXEC sp_addrolemember N'db_owner', N'$db_user_name'
+"@
+        Invoke-Sqlcmd -Query $map_user_to_db_sql -ServerInstance $db_server -Verbose
     }
 }
 
