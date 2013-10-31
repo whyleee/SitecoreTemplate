@@ -1,0 +1,9 @@
+Sitecore 7 MVC Project Template
+===============================
+
+v1.0
+----
+
+ - Integrated MVC 5 and NuGet
+ - Automated install scripts
+ - Automated template creation and packaging

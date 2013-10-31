@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-// General info about the product
+// Info about this particular assembly
 [assembly: AssemblyTitle("Sitecore Template Wizards")]
 [assembly: AssemblyDescription("Custom Visual Studio wizards for Sitecore 7 project template")]
 [assembly: AssemblyCompany("Creuna")]
@@ -8,5 +8,5 @@
 [assembly: AssemblyCopyright("Copyright © Creuna 2013")]
 
 // Product version
-[assembly: AssemblyVersion("0.1.0.0")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("1.0")]
+[assembly: AssemblyFileVersion("1.0")]

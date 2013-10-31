@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Sitecore7MVCTemplate..4fe21626-4625-480d-a13d-6e1215d7bd4d" Version="0.1" Language="en-US" Publisher="Creuna" />
-    <DisplayName>Sitecore 7 MVC/NuGet Project Template</DisplayName>
-    <Description xml:space="preserve">Clean Sitecore 7 project template with full ASP.NET MVC 5 and NuGet support</Description>
+    <Identity Id="SitecoreMVCTemplate" Version="1.0" Language="en-US" Publisher="Creuna" />
+    <DisplayName>Sitecore 7 MVC Project Template</DisplayName>
+    <Description xml:space="preserve">Clean Sitecore 7 project template with full ASP.NET MVC 5 and NuGet support. One-click installation, including IIS web site, SQL databases and access rights. Fork it on GitHub: https://github.com/whyleee/SitecoreTemplate. Project template creation and VSIX bundling is fully automated.</Description>
+    <MoreInfo>https://github.com/whyleee/SitecoreTemplate</MoreInfo>
     <ReleaseNotes>release_notes.txt</ReleaseNotes>
     <Icon>sitecore_logo.jpg</Icon>
-    <Tags>ASP.NET Sitecore MVC CMS NuGet</Tags>
+    <Tags>ASP.NET Sitecore CMS MVC NuGet automated IIS SQL database</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,12.0]" />
     <InstallationTarget Id="Microsoft.VisualStudio.VWDExpress" Version="[11.0,12.0]" />
   </Installation>
   <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5.1,)" />
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:VsixSubPath="SitecoreTemplate" d:Source="File" Path="SitecoreTemplate\MyTemplate.vstemplate" ProjectType="MVC" Language="C#" ViewEngine="Razor" TemplateId="Sitecore7MVCTemplate.v0.1" Title="Sitecore 7" Description="A project template for creating Sitecore 7 CMS websites, based on MVC framework and NuGet" Version="4.0" />
