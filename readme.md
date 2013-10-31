@@ -40,7 +40,7 @@ Usage
 To create a new Sitecore 7 project:
 
 1.	In Visual Studio, click *File -> New Project…*
-2.	Select project type**\***:
+2.	Select project type *(see notes below)*:
   1.	VS 2012: *Visual C# -> Web -> ASP.NET MVC 4 Web Application*
   2.	VS 2013: *Visual C# -> Web -> Visual Studio 2012 -> ASP.NET MVC 4 Web Application*
 3.	Select .NET Framework version (only **4.5** or **4.5.1** are supported by MVC 5)
@@ -51,7 +51,7 @@ To create a new Sitecore 7 project:
 8.	After successful project creation you'll see a new website is opened in your browser
 
 
-* Yep, I know it's weird to select MVC 4 project type when MVC 5 is actually used. But this is due to a couple of strong reasons:
+*NOTE*: Yep, I know it's weird to select MVC 4 project type when MVC 5 is actually used. But this is due to a couple of strong reasons:
  - MVC 5 is a part of ASP.NET One reorganization, and they have totally different project template format (to support one-click Web Forms/Web API or authentication installation) which is not documented anywhere for now. And unfortunately Sitecore is not using that stuff now and in the near future.
  - Visual Studio 2012 doesn't support MVC 5 at all now, neither the new ASP.NET One project templates (they should include MVC 5 support in November 2013, let's see).
 
