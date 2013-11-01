@@ -39,16 +39,17 @@ Usage
 
 To create a new Sitecore 7 project:
 
-1.	In Visual Studio, click *File -> New Project…*
-2.	Select project type *(see notes below)*:
+1.	Run Visual Studio as administrator (his rights required to create a website in IIS)
+2.	In Visual Studio, click *File -> New Project…*
+3.	Select project type *(see notes below)*:
   1.	VS 2012: *Visual C# -> Web -> ASP.NET MVC 4 Web Application*
   2.	VS 2013: *Visual C# -> Web -> Visual Studio 2012 -> ASP.NET MVC 4 Web Application*
-3.	Select .NET Framework version (only **4.5** or **4.5.1** are supported by MVC 5)
-4.	Set project name and location, click OK
-5.	Select `Sitecore 7` project template, click OK
-6.	Select Sitecore license file to use for a site and click OK
-7.	Wait a couple of minutes while project is being installed
-8.	After successful project creation you'll see a new website is opened in your browser
+4.	Select .NET Framework version (only **4.5** or **4.5.1** are supported by MVC 5)
+5.	Set project name and location, click OK
+6.	Select `Sitecore 7` project template, click OK
+7.	Select Sitecore license file to use for a site and click OK
+8.	Wait a couple of minutes while project is being installed
+9.	After successful project creation you'll see a new website is opened in your browser
 
 
 *NOTE*: Yep, I know it's weird to select MVC 4 project type when MVC 5 is actually used. But this is due to a couple of strong reasons:
