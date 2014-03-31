@@ -320,6 +320,10 @@ img.scLevelConnection
   padding: 1px;
   float: left;
 }
+
+.scChromeCommand {
+    z-index: 10;
+}
   
 .scChromeComboButton .scChromeCommand
 {

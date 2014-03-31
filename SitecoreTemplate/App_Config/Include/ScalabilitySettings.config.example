@@ -40,8 +40,8 @@
       </setting>
       <!--  MEDIA - DISABLE FILE MEDIA
             Enables or disables storage of media as files rather than database records. 
-            If true, user interfaces do not present options to store media as files.
-            If true, this setting supersedes the Media.UploadAsFiles setting.
+            If true, user interfaces do not present options to store media as files. 
+            All files will be stored in the database, disregarding the value of the Media.UploadAsFiles setting.    
       -->
       <setting name="Media.DisableFileMedia">
         <patch:attribute name="value">false</patch:attribute>

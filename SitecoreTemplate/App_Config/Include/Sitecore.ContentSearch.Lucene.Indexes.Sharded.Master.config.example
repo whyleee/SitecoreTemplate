@@ -1,7 +1,7 @@
 ﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
   <sitecore>
     <contentSearch>
-      <configuration type="Sitecore.ContentSearch.LuceneProvider.LuceneSearchConfiguration, Sitecore.ContentSearch.LuceneProvider">
+      <configuration type="Sitecore.ContentSearch.ContentSearchConfiguration, Sitecore.ContentSearch">
         <indexes hint="list:AddIndex">
           <!-- Change this to Sitecore.ContentSearch.LuceneProvider.SwitchOnRebuildLuceneIndex, Sitecore.ContentSearch.LuceneProvider if you would like indexes to be
                built in a temporary directory i.e. while rebuilding is happening, your old indexes work like normal until the rebuild is finished. -->
@@ -10,6 +10,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />
@@ -26,6 +27,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />
@@ -42,6 +44,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />
@@ -58,6 +61,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />
@@ -74,6 +78,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />
@@ -90,6 +95,7 @@
             <param desc="folder">$(id)</param>
             <!-- This initializes index property store. Id has to be set to the index id -->
             <param desc="propertyStore" ref="contentSearch/databasePropertyStore" param1="$(id)" />
+            <configuration ref="contentSearch/indexConfigurations/defaultLuceneIndexConfiguration" />
             <strategies hint="list:AddStrategy">
               <!-- NOTE: order of these is controls the execution order -->
               <strategy ref="contentSearch/indexUpdateStrategies/intervalAsyncMaster" />

@@ -91,6 +91,7 @@ App_Data
 /*/upload/
 
 #SitecoreTemplate
+/db/
 /*/css/*.css
 Package/*.dll
 Package/*.pdb
