@@ -16,8 +16,6 @@ namespace SitecoreTemplate.App_Start
 
             // js
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                "~/Scripts/jquery.unobtrusive*",
-                "~/Scripts/jquery.validate*"
                 // Your scripts here...
             ));
 
