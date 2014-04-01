@@ -84,11 +84,24 @@ packages/
 App_Data
 
 #Sitecore
-/*/sitecore/
-/*/sitecore modules/
+/*/sitecore/*
 /*/sitecore_files/
 /*/temp/
 /*/upload/
+
+#Sitecore RTE fix
+!/*/sitecore/shell/
+/*/sitecore/shell/*
+!/*/sitecore/shell/Applications/
+/*/sitecore/shell/Applications/*
+!/*/sitecore/shell/Applications/Content Manager/
+/*/sitecore/shell/Applications/Content Manager/*
+!/*/sitecore/shell/Applications/Content Manager/Dialogs/
+/*/sitecore/shell/Applications/Content Manager/Dialogs/*
+!/*/sitecore/shell/Applications/Content Manager/Dialogs/EditHtml/
+/*/sitecore/shell/Applications/Content Manager/Dialogs/EditHtml/*
+!/*/sitecore/shell/Applications/Content Manager/Dialogs/EditHtml/EditHtml.xaml.xml
+
 
 #SitecoreTemplate
 /db/
