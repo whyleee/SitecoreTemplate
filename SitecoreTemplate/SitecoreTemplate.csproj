@@ -353,6 +353,16 @@
       <Link>ComponentArt.UIFramework.lic</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Config\Include\Sitecore.ItemWebApi.config" />
+    <Content Include="App_Config\Include\Sitecore.Publishing.DedicatedInstance.config.example" />
+    <Content Include="App_Config\Include\Sitecore.Publishing.EventProvider.Async.config.disabled" />
+    <Content Include="App_Config\Include\Sitecore.Publishing.Optimizations.config.example" />
+    <Content Include="App_Config\Include\Sitecore.Publishing.Parallel.config.disabled" />
+    <Content Include="App_Config\Include\Sitecore.Publishing.Recovery.config.example" />
+    <Content Include="App_Config\Include\Sitecore.Speak.config" />
+    <Content Include="App_Config\Include\Sitecore.Speak.ItemWebApi.config" />
+    <Content Include="App_Config\Include\Sitecore.Speak.Mvc.config" />
+    <Content Include="App_Config\Prefetch\Webdb.config" />
     <None Include="install.ps1" />
     <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="js\jquery\jquery-2.0.3.js" />
@@ -408,7 +418,6 @@
     <Content Include="App_Config\Prefetch\Common.config" />
     <Content Include="App_Config\Prefetch\Core.config" />
     <Content Include="App_Config\Prefetch\Master.config" />
-    <Content Include="App_Config\Prefetch\Web.config" />
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\Security\Domains.config" />
     <Content Include="App_Config\Security\GlobalRoles.config" />
