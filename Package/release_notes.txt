@@ -1,5 +1,17 @@
-Sitecore 7 MVC Project Template
-===============================
+Sitecore 7.2 MVC Project Template
+=================================
+
+v1.1
+----
+
+ - Updated to Sitecore 7.2 Update-1 and MVC 5.1.1
+ - Updated NuGet restore, feeds and packages
+ - Removed Sitecore modules
+ - Removed jquery validate and ajax packages
+ - js/css moved back to Content and Scripts dirs
+ - Better URLs: lowercased and disabled aspx estensions
+ - Fixed Sitecore RTE edit HTML window height for Chrome
+ 
 
 v1.0
 ----

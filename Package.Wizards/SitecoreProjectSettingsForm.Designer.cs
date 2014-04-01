@@ -44,7 +44,7 @@
             this.uiLblLicenseFile.Name = "uiLblLicenseFile";
             this.uiLblLicenseFile.Size = new System.Drawing.Size(280, 13);
             this.uiLblLicenseFile.TabIndex = 0;
-            this.uiLblLicenseFile.Text = "Select Sitecore 7 CMS license file to use with the website:";
+            this.uiLblLicenseFile.Text = "Select Sitecore CMS license file to use with the website:";
             // 
             // uiOfdLicenseFile
             // 
@@ -122,7 +122,7 @@
             this.Name = "SitecoreProjectSettingsForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "New Sitecore 7 CMS Project";
+            this.Text = "New Sitecore 7.2 CMS Project";
             this.ResumeLayout(false);
             this.PerformLayout();
 
