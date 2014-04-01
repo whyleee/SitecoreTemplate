@@ -177,10 +177,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Igloo.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.ImageCropper.1.0.0\lib\Sitecore.Igloo.Shared.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.ItemWebApi">
       <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ItemWebApi.dll</HintPath>
     </Reference>
@@ -231,10 +227,6 @@
     <Reference Include="Sitecore.SegmentBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.SegmentBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.SharedSource.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.SharedSource.Localization.Core.1.0.1\lib\Sitecore.SharedSource.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Shell.MarketingAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -357,8 +349,6 @@
     <Content Include="css\sitecore\rte.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="App_Config\Include\Sitecore.SharedSource.Localization.config" />
-    <Content Include="App_Config\Include\ImageProcessor.config" />
     <Content Include="..\packages\ComponentArt.Web.UI.2010.1.2637.35\lib\ComponentArt.UIFramework.lic">
       <Link>ComponentArt.UIFramework.lic</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
