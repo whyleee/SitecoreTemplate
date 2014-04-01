@@ -2,15 +2,15 @@
 $web_path = (Get-Location).Path
 $root_path = (Get-Item $web_path).parent.FullName
 $db_path = Join-Path $root_path "db"
-$nuget_server = "http://159.224.42.176"
+$nuget_server = "http://nuget.lab409.com"
 $db_server = ".\sqlexpress"
 
 # params
 $sitename = "SitecoreTemplate"
 $hostname = "SitecoreTemplate.com"
 $packages = @{
-    "Sitecore.CMS.7.0.130918" = $web_path;
-    "Sitecore.CMS.Db.7.0.130918" = $db_path;
+    "Sitecore.CMS.7.2.140314" = $web_path;
+    "Sitecore.CMS.Db.7.2.140314" = $db_path;
 }
 
 # install
