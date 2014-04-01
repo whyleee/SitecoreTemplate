@@ -11,13 +11,13 @@ namespace SitecoreTemplate.App_Start
             // jquery
             bundles.Add(new ScriptBundle("~/bundles/jquery",
                 cdnPath: "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js").Include(
-                "~/js/jquery/jquery-{version}.js"
+                "~/Scripts/jquery-{version}.js"
             ));
 
             // js
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                "~/js/jquery/jquery.unobtrusive*",
-                "~/js/jquery/jquery.validate*"
+                "~/Scripts/jquery.unobtrusive*",
+                "~/Scripts/jquery.validate*"
                 // Your scripts here...
             ));
 

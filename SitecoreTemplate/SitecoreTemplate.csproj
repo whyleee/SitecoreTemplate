@@ -346,7 +346,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\sitecore\rte.css" />
+    <Content Include="Content\sitecore\rte.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="..\packages\ComponentArt.Web.UI.2010.1.2637.35\lib\ComponentArt.UIFramework.lic">
@@ -364,17 +364,17 @@
     <Content Include="App_Config\Include\Sitecore.Speak.Mvc.config" />
     <Content Include="App_Config\Prefetch\Webdb.config" />
     <None Include="install.ps1" />
-    <None Include="js\jquery\jquery-2.0.3.intellisense.js" />
-    <Content Include="js\jquery\jquery-2.0.3.js" />
-    <Content Include="js\jquery\jquery-2.0.3.min.js" />
-    <Content Include="js\jquery\jquery-2.0.3.min.map" />
-    <None Include="js\jquery\jquery.validate-vsdoc.js" />
-    <Content Include="js\jquery\jquery.unobtrusive-ajax.js" />
-    <Content Include="js\jquery\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="js\jquery\jquery.validate.js" />
-    <Content Include="js\jquery\jquery.validate.min.js" />
-    <Content Include="js\jquery\jquery.validate.unobtrusive.js" />
-    <Content Include="js\jquery\jquery.validate.unobtrusive.min.js" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Sitecore.config" />
     <Content Include="App_Browsers\Form.browser" />
     <Content Include="App_Browsers\XamlPage.browser" />
@@ -423,10 +423,10 @@
     <Content Include="App_Config\Security\GlobalRoles.config" />
     <Content Include="App_Config\XamlSharp.config" />
     <Content Include="default.htm.sitedown" />
-    <Content Include="css\sitecore\webedit.css" />
+    <Content Include="Content\sitecore\webedit.css" />
     <Content Include="App_Config\log4net.config" />
     <Content Include="Web.config" />
-    <Content Include="js\_references.js" />
+    <Content Include="Scripts\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
