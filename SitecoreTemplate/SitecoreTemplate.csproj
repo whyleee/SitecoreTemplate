@@ -51,6 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ComponentArt.Web.UI.2010.1.2637.35\lib\ComponentArt.Web.UI.dll</HintPath>
     </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\packages\YUICompressor.NET.2.1.1.0\lib\NET20\EcmaScript.NET.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -58,6 +61,9 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\YUICompressor.NET.2.1.1.0\lib\NET20\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="ITHit.WebDAV.Server, Version=2.1.1.108, Culture=neutral, PublicKeyToken=d057f7b1134051b5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -126,99 +132,105 @@
     </Reference>
     <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.RobotDetection">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Analytics.RobotDetection.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Apps.Loader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Apps.Loader.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Apps.Loader.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Automation.MarketingAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Automation.MarketingAutomation.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Automation.MarketingAutomation.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Buckets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Buckets.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Buckets.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Buckets.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Buckets.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Client, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq.Lucene, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.LuceneProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Igloo.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Sitecore.ImageCropper.1.0.0\lib\Sitecore.Igloo.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.ItemWebApi">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.ItemWebApi.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Logging.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Mvc.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc.DeviceSimulator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Mvc.DeviceSimulator.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc.ExperienceEditor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
     </Reference>
     <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\sitecore.nexus.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\sitecore.nexus.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.NVelocity, Version=0.4.2.8580, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.NVelocity.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.NVelocity.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Oracle, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Oracle.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Oracle.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Publishing.WebDeploy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Publishing.WebDeploy.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Publishing.WebDeploy.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Security.AntiCsrf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Security.AntiCsrf.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Security.AntiCsrf.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.SegmentBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.SegmentBuilder.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.SegmentBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.SharedSource.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -226,15 +238,33 @@
     </Reference>
     <Reference Include="Sitecore.Shell.MarketingAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Shell.MarketingAutomation.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Shell.MarketingAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Charting">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Client">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Dialogs">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.ItemWebApi">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.ItemWebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Mvc">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Web">
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Speak.Web.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Update, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Update.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Update.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Zip, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.CMS.7.0.130918\lib\net40\Sitecore.Zip.dll</HintPath>
+      <HintPath>..\packages\Sitecore.CMS.7.2.140314\lib\net40\Sitecore.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Base, Version=2009.3.600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -266,11 +296,11 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -278,20 +308,20 @@
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -308,6 +338,9 @@
     <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\packages\YUICompressor.NET.2.1.1.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
