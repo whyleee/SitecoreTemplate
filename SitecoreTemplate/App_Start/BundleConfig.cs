@@ -9,10 +9,12 @@ namespace SitecoreTemplate.App_Start
             bundles.UseCdn = true;
 
             // jquery
-            bundles.Add(new ScriptBundle("~/bundles/jquery",
-                cdnPath: "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js").Include(
+            var jquery = new ScriptBundle("~/bundles/jquery",
+                cdnPath: "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js").Include(
                 "~/Scripts/jquery-{version}.js"
-            ));
+            );
+            jquery.CdnFallbackExpression = "window.jQuery";
+            bundles.Add(jquery);
 
             // js
             bundles.Add(new ScriptBundle("~/bundles/js").Include(

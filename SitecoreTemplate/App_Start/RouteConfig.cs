@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace SitecoreTemplate.App_Start
@@ -24,6 +25,12 @@ namespace SitecoreTemplate.App_Start
             //    url: "{controller}/{action}/{id}",
             //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             //);
+
+            // css/js bundles
+            routes.MapRoute(
+                name: "css/js bundles",
+                url: "bundles/{*pathInfo}"
+            );
         }
     }
 }
