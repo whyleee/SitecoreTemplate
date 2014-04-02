@@ -124,7 +124,7 @@ Function Install-Package($package, $to)
     # download
     $url = $nuget_server + "/content/" + $packageZip
     $zip_path = Join-Path (Get-Location).Path $packageZip
-    iwr $url -OutFile $zip_path
+    iwr $url -OutFile $zip_path -Credential (Get-Credential)
 
     # unzip
     $shell_app = new-object -com shell.application
